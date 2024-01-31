@@ -1,5 +1,5 @@
 
-### cramers'v analysis between geography and factors
+### cramer's V analysis between geography and factors
 library(DescTools)
 
 
