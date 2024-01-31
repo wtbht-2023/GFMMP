@@ -16,7 +16,7 @@ factor_data <- metadata[, factor_name]
 
 
 
-### 做地域指标与其他指标的cramer’s V相关 #####
+### cramer’s V #####
 colnames(factor_data)
 geography_data <- factor_data[,c(2,3)]
 index_data <- factor_data[,-c(2,3)]
