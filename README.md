@@ -57,6 +57,45 @@ The Boruta analysis of food factors and genera data of all samples. The Boruta f
 * genus_data.txt: the relative abundance of genera data of each individuals in 15 provinces. 
 * metadata.txt: the variance of this study. 
 
+## 8.Mediation analysis 
+The mediation analysis among geography, food and genera data, and all data we used were Normalized. We uses the glm model and mediate function to structure a model with the food as the mediator. 
+### Data files: 
+* mediation.r: the mediation analysis among geography, food and genera data. 
+* food_data_use.txt: the food information, the rows are samples and the columns are the food factors. 
+* genus_use_data.txt: the relative abundance of genera data of each samples. 
+* geography_info_use.txt: the Latitude and Longitude information of each samples. 
+* metadata_general_use.txt: the Gender and Age information of each samples, which as the corrected factors.
+
+## 9.Heatmap  
+The relationship among food, genera and metabolite. The correlation coefficient (cor) and significance p-value between food and metabolite, genera and metabolite, were obtained through Spearman correlation analysis. The results among the three are drawn through ComplexHeatmap package. 
+
+### Data files: 
+* heatmap.r: the heatmap results among food, genera and metabolite. 
+* cor_food_metabolite.txt: the cor value between food and metabolite.
+* cor_food_metabolite_q005.txt: the filtered results of cor value, p-value and adjusted p-value with adjusted p-value < 0.05 between food and metabolite.
+* cor_genus_metabolite.txt: the cor value between genera and metabolite.
+* cor_genus_metabolite_q005.txt: the filtered results of cor value, p-value and adjusted p-value with adjusted p-value < 0.05 between genera and metabolite.
+* q_food_metabolite.txt: the adjusted p-value between food and metabolite.
+* q_genus_metabolite.txt: the adjusted p-value between genera and metabolite.
+
+## 10.Envfit  
+The envfit analysis between age group and genera which was filtered in maaslin analysis. We use the envfit function of vegan package to filter the genera which related to age group, and the fastspar software to calculate the correlation among genera. The corrplot function of corrplot package to show the results.
+### Data files: 
+
+* envfit.r：the envfit analysis between age group and genera and the results picture. 
+* age_info.txt: the age group of samples. 
+* envfit_pvalue.txt: the p-value of envfit results between age group and genera. 
+* envfit_pvalue_005.txt: the filtered results with p-value = 0.05. 
+* fastspar_data.txt：the fastspar results among genera. 
+* genus_data.txt：the relative abundance of genera data of each samples.
+
+## 11.RF 
+The randomForest analysis is carried out according to differential genera which filtered with MaAsLin analysis, and the leave-one-out cross validation is used to predict the age of each individual. Furthermore, the regression results between the actual age and the predicted age are displayed.
+
+### Data files: 
+* RF.r: the randomForest analysis and the results picture.
+* Age_info.txt: the age information of samples. 
+* genus_data.txt: the relative abundance of differential genera data of each samples. 
 
 
 ## Attention  
