@@ -98,5 +98,5 @@ The randomForest analysis is carried out according to differential genera which 
 * genus_data.txt: the relative abundance of differential genera data of each samples. 
 
 
-## Attention  
+## Note  
 The data uploaded in this project is all example data. The codes uploaded in this project are the implementation of the methods and the output of the result image.
